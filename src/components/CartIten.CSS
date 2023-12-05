@@ -1,0 +1,21 @@
+
+  
+  .item > label {
+    font-size: 0.75rem;
+    flex-grow: 1;
+  }
+  
+  .item svg {
+    width: 48px;
+    min-width: 48px;
+    height: 36px;
+    font-size: 1rem;
+    color: steelblue;
+    cursor: pointer;
+  }
+  
+  .item svg:focus, 
+  .item svg:hover {
+    color: red;
+    outline: none;
+  }
