@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react';
-import RentCar from './components/RentCar';
+import Clocks7 from './components/Clocks7';
 
 function App() {
   
     return(
-    <RentCar/>
+    <Clocks7/>
     )
   }
 
