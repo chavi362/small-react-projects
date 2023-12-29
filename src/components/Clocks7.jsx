@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '.\components\Clock.scss'
-
+import "./Clock.scss"
+import Clock from './Clock';
 const Clocks7 = () => {
     const [clocks, setClocks] = useState([
         { city: 'NYC', time: new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' }), updateInterval: 1 },
@@ -63,7 +63,8 @@ const Clocks7 = () => {
             <h1>Clocks All</h1>
             {clocks.map((clock, index) => (
                 <div key={index}>
-                    <p>{clock.city} Time: {clock.time}</p>
+                    <p>{clock.city}</p>
+                    <Clock time={clock.time}></Clock>
                     <button onClick={() => resetMyInterval(index)}>Reset My Interval</button>
                     <button onClick={() => doubleMyInterval(index)}>Double My Interval</button>
                     <button onClick={() => updateClock(index)}>Update Me Now</button>

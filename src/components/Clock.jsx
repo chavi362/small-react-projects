@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
-
-
-const Clock = () => {
+import React from 'react'
+const Clock = (props) => {
     const timeStyle = {
         height: "300px",
         width: "20px",
@@ -12,18 +10,10 @@ const Clock = () => {
     const divStyle={
         backgroundColor: 'lightgreen',
     }
-    const updateClock = () => {
-        return new Date().toLocaleTimeString()
-    }
-
-    const [time, setTime] = useState(updateClock());
-    setInterval(() => {
-        setTime(updateClock());
-    }, 1000)
     return (
         <div style={divStyle}>
             <span>this is the time now</span>
-            <p style={timeStyle}> {time}</p>
+            <p style={timeStyle}> {props.time}</p>
         </div>
     )
 }
